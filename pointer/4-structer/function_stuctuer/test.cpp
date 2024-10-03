@@ -8,9 +8,29 @@ struct Student {
 	int age;
 };
 
+struct emp
+{
+	int id;
+	char name[20];
+	int age;
+};
+
 void func(Student *s) {
 	s->age = s->age + 1;
 }
+
+struct emp input_emp() {
+	emp e;
+	cout<<"enter the id " << "\n";
+	cin >> e.id;
+	cout << "enter the name " << "\n";
+	cin >> e.name;
+	cout << "enter the age " << "\n";
+	cin >> e.age;
+	return e;
+}
+
+
 
 int main()
 {
@@ -26,6 +46,13 @@ int main()
 	func(&s);
 
 	cout << p->age << "\n"; // print age after the call func
+
+
+	emp e;
+	e = input_emp();
+	cout << e.id << "\n";
+	cout << e.name << "\n";
+	cout << e.age << "\n";
 
 	return 0;
 }
